@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "tbconta")
 
-public class ContaMod {
+public class Conta {
 
 	@Id
 	@GeneratedValue
