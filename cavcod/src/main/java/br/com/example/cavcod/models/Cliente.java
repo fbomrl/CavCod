@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name = "tbcliente")
 
 
-public class ClienteMod {
+public class Cliente {
 
 	@Id
 	@GeneratedValue

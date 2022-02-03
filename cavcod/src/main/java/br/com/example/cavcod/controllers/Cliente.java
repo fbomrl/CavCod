@@ -8,24 +8,25 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.example.cavcod.dao.ContaDao;
-import br.com.example.cavcod.models.ContaMod;
+import br.com.example.cavcod.models.Conta;
 
-	@RestController
-	public class Cliente {
-	
+
+@RestController
+public class Cliente {
 
 	@Autowired
 	private ContaDao dao;
+
 	@GetMapping("/")
-	
-	public ArrayList<ContaMod> recuperarTudo(){
-        ArrayList<ContaMod> lista;
-        lista = (ArrayList<ContaMod>)dao.findAll();
-        return lista;
-    }
-	
+
+	public ArrayList<Conta> recuperarTudo() {
+		ArrayList<Conta> lista;
+		lista = (ArrayList<Conta>) dao.findAll();
+		return lista;
+	}
+
 	@GetMapping("/contas/{numero}")
-    public ContaMod recuperarConta(@PathVariable int numero) {
-        return dao.findById(numero).orElse(null);
+	public Conta recuperarConta(@PathVariable int numero) {
+		return dao.findById(numero).orElse(null);
 	}
 }
