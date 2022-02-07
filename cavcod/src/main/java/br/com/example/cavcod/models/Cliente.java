@@ -3,31 +3,35 @@ package br.com.example.cavcod.models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//Para declarar uma entidade para que seja efetuado uma busca no banco de dados.
 @Entity
 @Table(name = "tbcliente")
 
-
+//Classe criada para modelo para cliente
 public class Cliente {
 
+	// Definir quem será a chave primaria
 	@Id
-	@GeneratedValue
-	
-	@Column(name="id")
+	// Auto incremet
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
+	@Column(name = "id")
 	private int id;
-	
-	@Column(nullable = false, name = "nome_cliente", length = 100)
+
+	@Column(name = "nome")
 	private String nome;
-	
-	@Column(nullable = false, name = "cpf", length = 15)
+
+	@Column(name = "cpf")
 	private String cpf;
-	
-	@Column(nullable = false, name = "telefone", length = 20)
+
+	@Column(name = "telefone")
 	private String telefone;
-	
-	@Column(nullable = false, name = "email", length = 100)
+
+	@Column(name = "email")
 	private String email;
 
 	public int getId() {
@@ -69,6 +73,5 @@ public class Cliente {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
+
 }
