@@ -15,7 +15,6 @@ public class Conta {
 
 	@Id
 	@GeneratedValue
-
 	@Column(name = "numero")
 	private int numero;
 
@@ -30,7 +29,7 @@ public class Conta {
 
 	@ManyToOne
 	@JoinColumn(name = "id_titular")
-	private Cliente id;
+	private Cliente cliente;
 
 	public int getNumero() {
 		return numero;
@@ -64,12 +63,11 @@ public class Conta {
 		this.saldo = saldo;
 	}
 
-	public Cliente getId() {
-		return id;
+	public Cliente getCliente() {
+		return cliente;
 	}
 
-	public void setId(Cliente id) {
-		this.id = id;
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
-
 }
