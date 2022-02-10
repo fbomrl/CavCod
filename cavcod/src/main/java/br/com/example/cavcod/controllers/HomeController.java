@@ -12,7 +12,7 @@ public class HomeController {
 	// rota inicial
 	@GetMapping("/")
 	public String index() {
-		return "Teste meu projeto";
+		return "Projeto Final - ";
 	}
 
 }

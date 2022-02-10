@@ -26,7 +26,7 @@ public class ClientesController {
 	}
 
 	// Definindo uma rota coringa
-	@GetMapping("/clientes/{id}")// mostra clientes por id
+	@GetMapping("/cliente/{id}")// mostra clientes por id
 	// Recebendo o parametro da rota coringa
 	// Path usado para busca unica
 	public Cliente DetalheConta(@PathVariable int id) {
