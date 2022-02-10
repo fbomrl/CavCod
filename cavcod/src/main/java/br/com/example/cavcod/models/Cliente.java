@@ -22,7 +22,7 @@ public class Cliente {
 	@Column(name = "id")
 	private int id;
 
-	@Column(name = "nome")
+	@Column(name = "nome")//dados 
 	private String nome;
 
 	@Column(name = "cpf")
