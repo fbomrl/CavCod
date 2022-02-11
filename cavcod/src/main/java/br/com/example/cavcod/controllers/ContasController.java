@@ -31,7 +31,7 @@ public class ContasController {
 		return (ArrayList<Conta>) listaContas;
 	}
 
-	@GetMapping("/contas/{id}") // mostra uma conta especifica e seu cliente relacionado (id refere-se ao número da conta, pois é o primary key)
+	@GetMapping("/conta/{id}") // mostra uma conta especifica e seu cliente relacionado (id refere-se ao número da conta, pois é o primary key)
 	public Conta detalheClinte(@PathVariable int id) {
 		// Mostrando na tela o valor da rota coringa
 		// return "O resultado do parametro é "+id;
